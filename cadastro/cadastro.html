@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro - RPG Site</title>
+
+    <link rel="stylesheet" href="cadastro.css" />
+
+    <!-- Fonte medieval -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <h1>CADASTRO</h1>
+      <p class="intro">Crie seu aventureiro</p>
+
+      <form class="formulario">
+        <input type="text" placeholder="Usuário" required />
+        <input type="email" placeholder="Email" required />
+        <input type="password" placeholder="Senha" required />
+        <input type="password" placeholder="Confirmar Senha" required />
+
+        <button class="btn register">CRIAR CONTA</button>
+      </form>
+
+      <p class="voltar" onclick="window.location.href = '../index.html'">
+        ← Voltar
+      </p>
+    </div>
+  </body>
+</html>

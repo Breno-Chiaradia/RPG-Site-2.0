@@ -1,0 +1,298 @@
+body {
+  margin: 0;
+  font-family: "Cinzel", serif;
+
+  background: url("../imgs/fundo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  color: white;
+}
+
+/* LAYOUT PRINCIPAL */
+.layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* CONTAINER DA FICHA (ESQUERDA) */
+.container {
+  max-width: 900px;
+  width: 65%;
+  margin: 40px 0 40px 40px;
+  padding: 70px;
+
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
+
+  box-shadow:
+    0 0 30px rgba(0, 0, 0, 0.9),
+    inset 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+/* CONTAINER DOS DADOS (DIREITA) */
+.dados-container {
+  width: 35%;
+  margin: 40px 40px 40px 0;
+  padding: 90px;
+
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 15px;
+
+  box-shadow:
+    0 0 30px rgba(0, 0, 0, 0.9),
+    inset 0 0 10px rgba(255, 255, 255, 0.05);
+}
+
+/* TÍTULOS */
+h1,
+h2 {
+  color: #d4af37;
+  text-align: center;
+}
+
+/* FOTO */
+.foto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.foto input {
+  margin-bottom: 10px;
+  color: white;
+}
+
+/* IMAGEM */
+#preview {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+
+  border: 3px solid #d4af37;
+  border-radius: 10px;
+
+  box-shadow:
+    0 0 15px rgba(0, 0, 0, 0.8),
+    0 0 10px #d4af37;
+
+  display: block;
+}
+
+/* TEXTAREA */
+textarea {
+  width: 100%;
+  height: 100px;
+  margin: 15px 0;
+  padding: 10px;
+
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  border: 1px solid #444;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+/* CAMPOS */
+.campo {
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  font-size: 13px;
+  margin-bottom: 5px;
+  color: #d4af37;
+  letter-spacing: 1px;
+}
+
+/* INPUT */
+input {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.8);
+  border: 1px solid #444;
+  color: white;
+  transition: 0.2s;
+}
+
+/* FOCO */
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 1px solid #d4af37;
+  box-shadow: 0 0 8px #d4af37;
+}
+
+/* BOTÃO */
+button {
+  display: block;
+  margin: 20px auto;
+  padding: 12px 30px;
+
+  border-radius: 4px;
+  cursor: pointer;
+
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    linear-gradient(145deg, #7a1c1c, #c0392b);
+
+  color: #e0c36e;
+  border: 2px solid #b35a3c;
+
+  box-shadow:
+    inset 0 0 10px rgba(0, 0, 0, 0.9),
+    0 5px 15px rgba(0, 0, 0, 0.9);
+
+  transition: 0.3s;
+}
+
+button:hover {
+  transform: scale(1.05);
+  box-shadow:
+    0 0 15px #ff4d4d,
+    inset 0 0 10px rgba(0, 0, 0, 0.9);
+}
+
+/* DADOS */
+.dados-container h2 {
+  text-align: center;
+  color: #d4af37;
+}
+
+.dados-container button {
+  width: 100%;
+  margin: 8px 0;
+  transition: 0.2s;
+}
+
+.dados-container button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px #d4af37;
+}
+
+/* RESULTADO DO DADO */
+#resultadoDado {
+  text-align: center;
+  margin-top: 55px;
+  font-size: 40px;
+  color: white;
+}
+#dadoAnimado {
+  font-size: 180px;
+  text-align: center;
+  margin-top: 20px;
+  display: block;
+}
+
+/* animação */
+.girando {
+  animation: girar 0.6s infinite linear;
+}
+
+@keyframes girar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+#historicoDados {
+  margin-top: 10px;
+  padding: 10px;
+  max-height: 200px;
+  overflow-y: auto;
+
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid #444;
+  border-radius: 8px;
+
+  font-size: 26px;
+}
+
+.historico-item {
+  padding: 5px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.dados-container button:last-of-type {
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
+    linear-gradient(145deg, #444, #222);
+  border: 2px solid #666;
+}
+
+.dados-container button:last-of-type:hover {
+  box-shadow: 0 0 10px #d4af37;
+}
+.hp-container {
+  width: 100%;
+  margin: 15px 0 25px 0;
+  text-align: center;
+}
+
+.hp-container label {
+  color: #d4af37;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* BARRA BASE */
+.hp-bar {
+  width: 100%;
+  height: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  border: 2px solid #b35a3c;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.9);
+  margin: 10px 0;
+}
+
+/* PREENCHIMENTO */
+#hpFill {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(90deg, #7a1c1c, #c0392b);
+  transition: width 0.3s ease;
+}
+
+/* CONTROLES */
+.hp-controls {
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+}
+
+.hp-controls input {
+  width: 80px;
+}
+.hp-bar {
+  width: 100%;
+  height: 18px;
+  background: #222;
+  border: 2px solid #d4af37;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+}
+
+#hpFill {
+  height: 100%;
+  width: 100%;
+  background: #2ecc71;
+  transition:
+    width 0.4s ease,
+    background 0.3s ease;
+}

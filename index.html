@@ -1,37 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>RPG Site</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RPG Site</title>
 
-<!-- Fonte medieval -->
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+    <!-- Fonte medieval -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap"
+      rel="stylesheet"
+    />
 
-<!-- CSS -->
-<link rel="stylesheet" href="style.css">
-</head>
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
+    <div class="container">
+      <h1>RPG SITE</h1>
+      <p class="intro">CRIAR. EXPLORAR. VIVER AVENTURAS.</p>
 
-<div class="container">
+      <div class="buttons">
+        <button
+          class="login"
+          onclick="window.location.href = 'login/login.html'"
+        >
+          LOGIN
+        </button>
+        <button
+          class="register"
+          onclick="window.location.href = 'cadastro/cadastro.html'"
+        >
+          CADASTRAR
+        </button>
+      </div>
 
-    <h1>RPG SITE</h1>
-    <p class="intro">CRIAR. EXPLORAR. VIVER AVENTURAS.</p>
-
-    <div class="buttons">
-        <button class="login" onclick="window.location.href='login/login.html'">LOGIN</button>
-        <button class="register" onclick="window.location.href='cadastro/cadastro.html'">CADASTRAR</button>
+      <p class="descricao">
+        Uma plataforma completa para jogadores de RPG. Crie seu personagem,
+        gerencie suas fichas, organize seus itens e role dados para suas
+        aventuras épicas.
+      </p>
     </div>
 
-    <p class="descricao">
-        Uma plataforma completa para jogadores de RPG. Crie seu personagem,
-        gerencie suas fichas, organize seus itens e role dados para suas aventuras épicas.
-    </p>
-
-</div>
-
-<script src="js/script.js"></script>
-
-</body>
+    <script src="js/script.js"></script>
+  </body>
 </html>

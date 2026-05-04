@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ficha do Personagem</title>
+
+    <link rel="stylesheet" href="ficha.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="layout">
+      <!-- 🧍 FICHA (ESQUERDA) -->
+      <div class="container">
+        <h1>FICHA DO PERSONAGEM</h1>
+
+        <div class="foto">
+          <label for="uploadFoto">Escolher foto</label>
+          <input type="file" id="uploadFoto" accept="image/*" />
+          <img
+            id="preview"
+            src="../imgs/default.png"
+            alt="Foto do personagem"
+          />
+        </div>
+
+        <!-- ❤️ BARRA DE VIDA -->
+        <div class="hp-container">
+          <label>Vida</label>
+
+          <div class="hp-bar">
+            <div id="hpFill"></div>
+          </div>
+
+          <div class="hp-controls">
+            <input type="number" id="danoInput" placeholder="Dano/Cura" />
+            <button onclick="tomarDano()">Dano</button>
+            <button onclick="curarVida()">Curar</button>
+          </div>
+
+          <p id="hpText">100 / 100</p>
+        </div>
+
+        <div class="campo">
+          <label>Descrição</label>
+          <textarea></textarea>
+        </div>
+
+        <h2>Informações Básicas</h2>
+
+        <div class="grid">
+          <div class="campo"><label>Jogador</label><input type="text" /></div>
+          <div class="campo">
+            <label>Personagem</label><input type="text" />
+          </div>
+          <div class="campo">
+            <label>Nível</label><input type="number" value="1" />
+          </div>
+          <div class="campo">
+            <label>CA</label><input type="number" value="0" />
+          </div>
+          <div class="campo">
+            <label>Dinheiro</label><input type="number" value="0" />
+          </div>
+        </div>
+
+        <h2>Sobre o Personagem</h2>
+
+        <div class="grid">
+          <div class="campo"><label>Classe</label><input type="text" /></div>
+          <div class="campo"><label>Subclasse</label><input type="text" /></div>
+          <div class="campo"><label>Raça</label><input type="text" /></div>
+          <div class="campo">
+            <label>Antecedente</label><input type="text" />
+          </div>
+          <div class="campo"><label>Tendência</label><input type="text" /></div>
+        </div>
+
+        <h2>Atributos</h2>
+
+        <div class="grid">
+          <div class="campo"><label>Força</label><input type="number" /></div>
+          <div class="campo">
+            <label>Inteligência</label><input type="number" />
+          </div>
+          <div class="campo">
+            <label>Destreza</label><input type="number" />
+          </div>
+          <div class="campo">
+            <label>Sabedoria</label><input type="number" />
+          </div>
+          <div class="campo">
+            <label>Constituição</label><input type="number" />
+          </div>
+          <div class="campo"><label>Carisma</label><input type="number" /></div>
+        </div>
+
+        <h2>Inventário</h2>
+
+        <div class="grid">
+          <div class="campo"><label>Perícias</label><input type="text" /></div>
+          <div class="campo"><label>Itens</label><input type="text" /></div>
+          <div class="campo">
+            <label>Consumíveis</label><input type="text" />
+          </div>
+          <div class="campo"><label>Idiomas</label><input type="text" /></div>
+          <div class="campo">
+            <label>Equipamentos</label><input type="text" />
+          </div>
+          <div class="campo"><label>Feitiços</label><input type="text" /></div>
+        </div>
+
+        <h2>Salvar Personagem</h2>
+
+        <button onclick="salvarFicha()">Salvar Ficha</button>
+        <button onclick="resetPersonagem()">Reset Personagem</button>
+
+        <p id="status"></p>
+      </div>
+
+      <!-- 🎲 DADOS (DIREITA) -->
+      <div class="dados-container">
+        <h2>DADOS</h2>
+
+        <button onclick="rolarDado(4)">D4</button>
+        <button onclick="rolarDado(6)">D6</button>
+        <button onclick="rolarDado(8)">D8</button>
+        <button onclick="rolarDado(10)">D10</button>
+        <button onclick="rolarDado(12)">D12</button>
+        <button onclick="rolarDado(20)">D20</button>
+
+        <p id="resultadoDado"></p>
+
+        <div id="dadoAnimado">🎲</div>
+
+        <h3>Histórico de Rolagens</h3>
+        <div id="historicoDados"></div>
+
+        <button onclick="limparHistorico()">Limpar Histórico</button>
+      </div>
+    </div>
+
+    <script src="ficha.js"></script>
+  </body>
+</html>
