@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Criação de Personagem</title>
+
+    <!-- Fonte medieval -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="personagem.css" />
+  </head>
+
+  <body>
+    <!-- VÍDEO DE FUNDO -->
+    <video autoplay muted loop playsinline id="bg-video">
+      <source src="/videos/videoback.webm" type="video/mp4" />
+    </video>
+
+    <!-- BOTÕES GERAIS  -->
+    <div class="top-botoes">
+      <button class="btn-voltar" onclick="voltarPagina()">VOLTAR</button>
+      <button class="btn-pronto" onclick="proximaEtapa()">PRONTO</button>
+    </div>
+
+    <!-- ÁREA DOS PERSONAGENS -->
+    <div id="personagens"></div>
+
+    <!-- JS -->
+    <script src="personagem.js"></script>
+  </body>
+</html>
